@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        .parent {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            animation-name: moveBoxes;
+            animation-duration: 18s;
+            animation-iteration-count: infinite;
+        }
+        
+        .parent .child {
+            width: 70px;
+            height: 70px;
+            margin: 5px;
+            flex: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        
+        .child:nth-child(1) {
+            background-color: red;
+        }
+        
+        .child:nth-child(2) {
+            background-color: blue;
+        }
+        
+        .child:nth-child(3) {
+            background-color: green;
+        }
+        
+        .child:nth-child(4) {
+            background-color: orange;
+        }
+        
+        .child:nth-child(5) {
+            background-color: purple;
+        }
+        
+        .child:nth-child(6) {
+            background-color: brown;
+        }
+        
+        @keyframes moveBoxes {
+            /* 1. TOP LEFT */
+            0% {
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+            /* 2. TOP CENTER */
+            11% {
+                justify-content: center;
+                align-items: flex-start;
+            }
+            /* 3. TOP RIGHT */
+            22% {
+                justify-content: flex-end;
+                align-items: flex-start;
+            }
+            /* 4. MIDDLE LEFT */
+            33% {
+                justify-content: flex-start;
+                align-items: center;
+            }
+            /* 5. CENTER */
+            44% {
+                justify-content: center;
+                align-items: center;
+            }
+            /* 6. MIDDLE RIGHT */
+            55% {
+                justify-content: flex-end;
+                align-items: center;
+            }
+            /* 7. BOTTOM LEFT */
+            66% {
+                justify-content: flex-start;
+                align-items: flex-end;
+            }
+            /* 8. BOTTOM CENTER */
+            77% {
+                justify-content: center;
+                align-items: flex-end;
+            }
+            /* 9. BOTTOM RIGHT */
+            88% {
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+            /* START AGAIN */
+            100% {
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+    </style>
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flexbox</title>
+
+</head>
+
+
+<body>
+
+    <div class="parent">
+
+        <div class="child">Neema1</div>
+
+        <div class="child">Neema2</div>
+
+        <div class="child">Neema3</div>
+
+        <div class="child">Neema4</div>
+
+        <div class="child">Neema5</div>
+
+        <div class="child">Neema6</div>
+
+    </div>
+
+</body>
+
+</html>
